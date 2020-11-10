@@ -1,0 +1,26 @@
+@import "styles/_variables.scss";
+
+.account-box {
+  position: relative;
+  font-size: 1.2rem;
+  width: 100%;
+  min-width: 31.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  .account-box__logo {
+    background-color: $mainColor;
+    color: $white;
+    text-align: center;
+    font-size: 1.6rem;
+    text-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 2rem;
+    padding: 4rem 0;
+  }
+}

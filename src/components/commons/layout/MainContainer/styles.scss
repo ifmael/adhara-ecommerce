@@ -1,0 +1,8 @@
+@import "styles/_variables.scss";
+
+.main-container {
+  @media (min-width: $desktop) {
+    width: 99rem;
+    margin: 0 auto;
+  }
+}

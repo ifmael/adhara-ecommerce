@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input test take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="input-container"
+  >
+    <div
+      class="input-field"
+    >
+      <input
+        class="input-field-value"
+        id=""
+        name=""
+        placeholder=""
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

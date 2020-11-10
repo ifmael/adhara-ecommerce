@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "929d281f-c777-4f21-874f-90e61d2239d2",
+      "name": "Ismael ",
+      "lastName": "Rodriguez",
+      "email": "ismael.rm.1986@gmail.com",
+      "password": "19be7cdacf498afcbdfb9ba1b916142f",
+      "token": "2400301f-11ff-43b4-91c6-9075917fa166"
+    },
+    {
+      "id": "3570dac2-b934-4245-8a96-98d09d9778c6",
+      "name": "Hugo",
+      "lastName": "Lopez",
+      "email": "hugo@hugo.es",
+      "password": "19be7cdacf498afcbdfb9ba1b916142f",
+      "token": "e6ddc4ec-997a-4fc5-8855-7f4ed9d10b0b"
+    }
+  ],
+  "customers": [
+    {
+      "id": "776f3fa7-6254-4a6e-942e-b3c2971995c5",
+      "name": "Ismael Rodriguez",
+      "lastName": "Rodriguez",
+      "email": "ismael.rm.1986@gmail.com",
+      "phone": "4444444",
+      "address": "C/Santa Catalina"
+    }
+  ]
+}

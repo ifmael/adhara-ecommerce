@@ -1,25 +1,47 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import MainContainer from "components/commons/layout/MainContainer";
+import AccountBox from "components/commons/layout/AccountBox";
+import { SignIn, SignUp, Customers, Products } from "pages";
+import "./styles/App.scss";
 
-function App() {
+const client = new ApolloClient({
+  uri: "http://localhost:3005/graphql",
+  cache: new InMemoryCache(),
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ecommerce">
+      <ApolloProvider client={client}>
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <AccountBox>
+                <SignIn />
+              </AccountBox>
+            </Route>
+            <Route path="/join" exact>
+              <AccountBox>
+                <SignUp />
+              </AccountBox>
+            </Route>
+            <Route path="/customers" exact>
+              <MainContainer>
+                <Customers />
+              </MainContainer>
+            </Route>
+            <Route path="/products" exact>
+              <MainContainer>
+                <Products />
+              </MainContainer>
+            </Route>
+          </Switch>
+        </Router>
+      </ApolloProvider>
     </div>
   );
-}
+};
 
 export default App;

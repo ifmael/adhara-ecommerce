@@ -1,0 +1,40 @@
+@import "styles/_variables.scss";
+
+.ecommerce {
+  width: 100%;
+
+  .sign-in-container,
+  .sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    min-width: 31.5rem;
+    max-width: 113rem;
+    margin: 1rem auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .customers,
+  .products {
+    margin: 0 2rem;
+    .form-add-element {
+      .input-container {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        @media (min-width: $desktop) {
+          width: 50%;
+        }
+      }
+
+      .buttons-container {
+        margin-top: 5rem;
+      }
+    }
+  }
+}

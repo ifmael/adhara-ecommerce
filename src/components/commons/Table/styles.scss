@@ -1,0 +1,81 @@
+@import "styles/_variables.scss";
+
+.my-table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5rem;
+  }
+
+  /* Zebra striping */
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+
+  th {
+    background: $mainColor;
+    color: white;
+    font-weight: bold;
+  }
+
+  td,
+  th {
+    padding: 1rem;
+    border: 0.1rem solid $grey;
+    text-align: center;
+    font-size: 1.8rem;
+
+    .actions-cell {
+      display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 76rem),
+    (min-device-width: 76.8rem) and (max-device-width: 102.4rem) {
+    table {
+      width: 100%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      border: 0.1rem solid $grey;
+    }
+
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 0.1rem solid $lightGrey;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:before {
+      position: absolute;
+
+      top: 0.6rem;
+      left: 0.6rem;
+      width: 45%;
+      padding-right: 1rem;
+      white-space: nowrap;
+      /* Label the data */
+      content: attr(data-column);
+
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}

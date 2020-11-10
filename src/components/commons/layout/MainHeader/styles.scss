@@ -1,0 +1,24 @@
+@import "styles/_variables.scss";
+
+.main-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 5.5rem;
+  font-size: 1.6rem;
+  color: $white;
+  text-align: center;
+  padding: 1rem;
+  background-color: $mainColor;
+
+  a {
+    color: $white;
+  }
+
+  .main-header-settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}

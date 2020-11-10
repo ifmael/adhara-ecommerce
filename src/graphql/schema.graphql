@@ -1,0 +1,25 @@
+type Product {
+  # id: String!
+  # name: String!
+  # department: String!
+  id: String! @fake(type: uuid)
+  name: String! @fake(type: firstName)
+  department: String! @fake(type: firstName)
+}
+
+input ProductInput {
+  id: String!
+  name: String!
+  department: String!
+}
+
+type Query {
+  product(id: ID): Product
+  products: [Product]
+}
+
+type Mutation {
+  createProduct(input: ProductInput): Product
+  deleteProduct(id: String): Product
+  updateProduct(id: String, input: ProductInput): Product
+}

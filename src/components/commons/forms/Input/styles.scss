@@ -1,0 +1,48 @@
+@import "styles/_variables.scss";
+
+.input-container {
+  margin-bottom: 1.5rem;
+
+  .input-label-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-required {
+    color: $generalLink;
+    margin-left: auto;
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid $generalLink;
+    border-radius: 2rem;
+    color: $generalLink;
+  }
+
+  .input-field {
+    height: 4rem;
+  }
+
+  .single-icon {
+    font-size: 2rem;
+    margin-left: 1.1rem;
+  }
+
+  .input-field-value {
+    color: $generalLink;
+    font-size: 1.6rem;
+    margin: 1rem;
+    width: 100%;
+    border: none;
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    &::placeholder {
+      color: $generalLink;
+    }
+  }
+}

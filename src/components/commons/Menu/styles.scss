@@ -1,0 +1,32 @@
+@import "styles/_variables.scss";
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding: 0;
+  margin: 1rem 0 1.75rem;
+
+  .menu-item {
+    margin: 0 0.5rem;
+
+    .menu-link {
+      display: block;
+      text-decoration: none;
+      padding: 0.5rem;
+
+      &.custom-button {
+        min-width: 9rem;
+      }
+
+      &.is-active {
+        color: $mainColor;
+        font-weight: bold;
+        border-bottom: 0.3rem solid transparent;
+        border-bottom-color: $mainColor;
+      }
+    }
+  }
+}
